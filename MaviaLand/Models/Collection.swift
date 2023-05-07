@@ -11,22 +11,34 @@ struct MaviaLand: Codable {
 
 struct Collection: Codable {
     let name: String
-    let slug: String
     let description: String
     let externalLink: String
     
-    let traits: [String: TraitInfo]
+    let traits: Traits
     let paymentTokens: [Payment]
     let stats: Stats
     
     enum CodingKeys: String, CodingKey {
         case name
-        case slug
         case description
         case externalLink = "external_url"
+       
         case traits
         case paymentTokens = "payment_tokens"
         case stats
+    }
+    
+    var information: String {
+        return """
+        Name: \(name)
+        Description: \(description)
+        External Link: \(externalLink)
+        Trats: \(traits)
+        Payment Token: \(paymentTokens)
+        Stats: \(String(format: "%.2f", stats.averagePrice)),
+        Floor Price: \(String(format: "%.2f", stats.floorPrice)),
+        Total Sales: \(stats.totalSales)
+        """
     }
 }
 
@@ -43,24 +55,19 @@ struct Payment: Codable {
         case symbol
         case imageUrl = "image_url"
         case name
+       
         case ethPrice = "eth_price"
         case usdPrice = "usd_price"
     }
 }
 
 struct Traits: Codable {
-    let legendary: TraitInfo
-    let common: TraitInfo
-    let rare: TraitInfo
-    let min: TraitInfo
-    let max: TraitInfo
+    let price: TraitInfo
+    let type: TraitType
     
     enum CodingKeys: String, CodingKey {
-        case legendary
-        case common
-        case rare
-        case min
-        case max
+        case price
+        case type
     }
 }
 
@@ -69,8 +76,14 @@ struct TraitInfo: Codable {
     let max: Double?
 }
 
+struct TraitType: Codable {
+    let legendary: Int
+    let common: Int
+    let rare: Int
+}
+
 struct Stats: Codable {
-    let totalSales: Double
+    let totalSales: Int
     let averagePrice: Double
     let floorPrice: Double
     
