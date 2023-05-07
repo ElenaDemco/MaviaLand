@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -17,10 +17,10 @@ final class ViewController: UIViewController {
 }
 
 // MARK: - Networking
-private extension ViewController {
+private extension MainViewController {
     func fetchToken() {
-        URLSession.shared.dataTask(with: URL(string: "https://api.opensea.io/collection/mavia-land?format=json")!) { data, response, error in
-            guard let data = data else {
+        URLSession.shared.dataTask(with: URL(string: "https://api.opensea.io/collection/mavia-land?format=json")!) { data, _, error in
+            guard let data else {
                 print(error?.localizedDescription ?? "Error")
                 return
             }

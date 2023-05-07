@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		668E685F2A0812B70011A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E685E2A0812B70011A119 /* AppDelegate.swift */; };
 		668E68612A0812B70011A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68602A0812B70011A119 /* SceneDelegate.swift */; };
-		668E68632A0812B70011A119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68622A0812B70011A119 /* ViewController.swift */; };
+		668E68632A0812B70011A119 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68622A0812B70011A119 /* MainViewController.swift */; };
 		668E68662A0812B70011A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68642A0812B70011A119 /* Main.storyboard */; };
 		668E68682A0812B90011A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668E68672A0812B90011A119 /* Assets.xcassets */; };
 		668E686B2A0812B90011A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68692A0812B90011A119 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		668E685B2A0812B70011A119 /* MaviaLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaviaLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668E685E2A0812B70011A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		668E68602A0812B70011A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		668E68622A0812B70011A119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		668E68622A0812B70011A119 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		668E68652A0812B70011A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		668E68672A0812B90011A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		668E686A2A0812B90011A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		668E68732A0812FD0011A119 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				668E68622A0812B70011A119 /* ViewController.swift */,
+				668E68622A0812B70011A119 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				668E68632A0812B70011A119 /* ViewController.swift in Sources */,
+				668E68632A0812B70011A119 /* MainViewController.swift in Sources */,
 				668E685F2A0812B70011A119 /* AppDelegate.swift in Sources */,
 				668E68612A0812B70011A119 /* SceneDelegate.swift in Sources */,
 				668E68762A0813370011A119 /* MaviaLand.swift in Sources */,
