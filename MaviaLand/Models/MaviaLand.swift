@@ -49,8 +49,8 @@ struct Traits: Decodable {
 }
 
 struct TraitInfo: Decodable {
-    let min: Double?
-    let max: Double?
+    let min: Double
+    let max: Double
 }
 
 struct TraitType: Decodable {
@@ -137,8 +137,8 @@ struct Stats: Decodable {
 //}
 //
 //struct TraitInfo: Codable {
-//    let min: Double?
-//    let max: Double?
+//    let min: Double
+//    let max: Double
 //}
 //
 //struct TraitType: Codable {
