@@ -13,6 +13,7 @@
 		668E68662A0812B70011A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68642A0812B70011A119 /* Main.storyboard */; };
 		668E68682A0812B90011A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668E68672A0812B90011A119 /* Assets.xcassets */; };
 		668E686B2A0812B90011A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68692A0812B90011A119 /* LaunchScreen.storyboard */; };
+		668E68762A0813370011A119 /* MaviaLand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68752A0813370011A119 /* MaviaLand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		668E68672A0812B90011A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		668E686A2A0812B90011A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		668E686C2A0812B90011A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		668E68752A0813370011A119 /* MaviaLand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaviaLand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		668E685D2A0812B70011A119 /* MaviaLand */ = {
 			isa = PBXGroup;
 			children = (
-				668E685E2A0812B70011A119 /* AppDelegate.swift */,
-				668E68602A0812B70011A119 /* SceneDelegate.swift */,
-				668E68622A0812B70011A119 /* ViewController.swift */,
-				668E68642A0812B70011A119 /* Main.storyboard */,
+				668E68722A0812CF0011A119 /* App */,
+				668E68732A0812FD0011A119 /* ViewControllers */,
+				668E68772A08133A0011A119 /* Models */,
+				668E68742A08130C0011A119 /* Storyboards */,
 				668E68672A0812B90011A119 /* Assets.xcassets */,
-				668E68692A0812B90011A119 /* LaunchScreen.storyboard */,
-				668E686C2A0812B90011A119 /* Info.plist */,
 			);
 			path = MaviaLand;
+			sourceTree = "<group>";
+		};
+		668E68722A0812CF0011A119 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				668E685E2A0812B70011A119 /* AppDelegate.swift */,
+				668E68602A0812B70011A119 /* SceneDelegate.swift */,
+				668E686C2A0812B90011A119 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		668E68732A0812FD0011A119 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				668E68622A0812B70011A119 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		668E68742A08130C0011A119 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				668E68642A0812B70011A119 /* Main.storyboard */,
+				668E68692A0812B90011A119 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		668E68772A08133A0011A119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				668E68752A0813370011A119 /* MaviaLand.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 				668E68632A0812B70011A119 /* ViewController.swift in Sources */,
 				668E685F2A0812B70011A119 /* AppDelegate.swift in Sources */,
 				668E68612A0812B70011A119 /* SceneDelegate.swift in Sources */,
+				668E68762A0813370011A119 /* MaviaLand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +325,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3U38YXL55F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MaviaLand/Info.plist;
+				INFOPLIST_FILE = MaviaLand/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +339,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ED.MaviaLand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +357,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3U38YXL55F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MaviaLand/Info.plist;
+				INFOPLIST_FILE = MaviaLand/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ED.MaviaLand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
