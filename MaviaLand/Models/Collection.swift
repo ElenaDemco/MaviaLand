@@ -22,7 +22,7 @@ struct Collection: Codable {
         case name
         case description
         case externalLink = "external_url"
-       
+        
         case traits
         case paymentTokens = "payment_tokens"
         case stats
@@ -47,6 +47,7 @@ struct Payment: Codable {
     let symbol: String
     let imageUrl: String
     let name: String
+    
     let ethPrice: Double
     let usdPrice: Double
     
@@ -55,7 +56,7 @@ struct Payment: Codable {
         case symbol
         case imageUrl = "image_url"
         case name
-       
+        
         case ethPrice = "eth_price"
         case usdPrice = "usd_price"
     }
