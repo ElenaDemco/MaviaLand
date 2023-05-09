@@ -7,10 +7,19 @@
 
 import UIKit
 
-class PurchaseViewController: UIViewController {
+final class PurchaseViewController: UIViewController {
 
+    @IBOutlet var purchaseImage: UIImageView!
+    
+    @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var purchaseLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    @IBAction func logOutButtonDidTapped() {
     }
 }

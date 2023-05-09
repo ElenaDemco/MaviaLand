@@ -7,8 +7,16 @@
 
 import UIKit
 
-class WalletViewController: UIViewController {
+final class WalletViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet var walletImage: UIImageView!
+    
+    @IBOutlet var balanceLabel: UILabel!
+    @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var transactionsLabel: UILabel!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
