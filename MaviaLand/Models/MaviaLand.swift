@@ -27,7 +27,6 @@ struct Collection: Codable {
  
 struct Payment: Codable {
     let id: Int
-    let symbol: String
     let name: String
   
     let imageUrl: URL
