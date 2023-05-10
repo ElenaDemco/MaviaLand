@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		668B77352A0A895500EFEF44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B77342A0A895500EFEF44 /* LoginViewController.swift */; };
-		668B77372A0A896400EFEF44 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B77362A0A896400EFEF44 /* WalletViewController.swift */; };
-		668B77392A0A89B400EFEF44 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B77382A0A89B400EFEF44 /* PurchaseViewController.swift */; };
+		668B77372A0A896400EFEF44 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B77362A0A896400EFEF44 /* InfoViewController.swift */; };
 		668E685F2A0812B70011A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E685E2A0812B70011A119 /* AppDelegate.swift */; };
 		668E68612A0812B70011A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68602A0812B70011A119 /* SceneDelegate.swift */; };
-		668E68632A0812B70011A119 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E68622A0812B70011A119 /* MainViewController.swift */; };
 		668E68662A0812B70011A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68642A0812B70011A119 /* Main.storyboard */; };
 		668E68682A0812B90011A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668E68672A0812B90011A119 /* Assets.xcassets */; };
 		668E686B2A0812B90011A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668E68692A0812B90011A119 /* LaunchScreen.storyboard */; };
@@ -24,12 +22,10 @@
 
 /* Begin PBXFileReference section */
 		668B77342A0A895500EFEF44 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		668B77362A0A896400EFEF44 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
-		668B77382A0A89B400EFEF44 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		668B77362A0A896400EFEF44 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		668E685B2A0812B70011A119 /* MaviaLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaviaLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668E685E2A0812B70011A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		668E68602A0812B70011A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		668E68622A0812B70011A119 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		668E68652A0812B70011A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		668E68672A0812B90011A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		668E686A2A0812B90011A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,11 +90,9 @@
 		668E68732A0812FD0011A119 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				668E68622A0812B70011A119 /* MainViewController.swift */,
-				66BB5E012A0AA80A0081AAB0 /* CollectionViewController.swift */,
 				668B77342A0A895500EFEF44 /* LoginViewController.swift */,
-				668B77362A0A896400EFEF44 /* WalletViewController.swift */,
-				668B77382A0A89B400EFEF44 /* PurchaseViewController.swift */,
+				66BB5E012A0AA80A0081AAB0 /* CollectionViewController.swift */,
+				668B77362A0A896400EFEF44 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -217,14 +211,12 @@
 			files = (
 				66BB5DFE2A0AA57D0081AAB0 /* NetworkManager.swift in Sources */,
 				66BB5DF82A0AA4740081AAB0 /* NFTCell.swift in Sources */,
-				668E68632A0812B70011A119 /* MainViewController.swift in Sources */,
 				668E685F2A0812B70011A119 /* AppDelegate.swift in Sources */,
 				66BB5E022A0AA80A0081AAB0 /* CollectionViewController.swift in Sources */,
 				668E68612A0812B70011A119 /* SceneDelegate.swift in Sources */,
-				668B77392A0A89B400EFEF44 /* PurchaseViewController.swift in Sources */,
 				668B77352A0A895500EFEF44 /* LoginViewController.swift in Sources */,
 				668E68762A0813370011A119 /* MaviaLand.swift in Sources */,
-				668B77372A0A896400EFEF44 /* WalletViewController.swift in Sources */,
+				668B77372A0A896400EFEF44 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +366,7 @@
 				DEVELOPMENT_TEAM = 3U38YXL55F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaviaLand/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mavia Land";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -406,6 +399,7 @@
 				DEVELOPMENT_TEAM = 3U38YXL55F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaviaLand/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mavia Land";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

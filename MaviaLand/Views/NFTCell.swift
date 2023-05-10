@@ -7,13 +7,46 @@
 
 import UIKit
 
-class NFTCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+final class NFTCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
+    @IBOutlet var imageNFT: UIImageView!
+    
+    @IBOutlet var collectionName: UILabel!
+    @IBOutlet var quantityNFT: UILabel!
+    @IBOutlet var ownersQuantityNFT: UILabel!
+    
+    // MARK: - Private Properties
+    private let networkManager = NetworkManager.shared
+    
+    // MARK: - Public Properties
+    var buttonTapped: (() -> Void)?
+    
+    // MARK: - Public Methods
+    func configureCollection(with info: Collection) {
+        collectionName.text = info.name
+        quantityNFT.text = "Lands: \(info.stats.count)"
+        ownersQuantityNFT.text = String("Owners: \(info.stats.numOwners)")
+        
+        networkManager.fetchImage(from: info.imageUrl) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.imageNFT.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    } 
+    
+    // MARK: - IBActions
+    @IBAction func buttonOpenDidTapped(_sender: Any) {
+        if let tableView = self.superview as? UITableView {
+            if let indexPath = tableView.indexPath(for: self) {
+                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+                tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
+            }
+        }
     }
 }
+
+

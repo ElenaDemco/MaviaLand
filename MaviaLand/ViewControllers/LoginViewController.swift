@@ -14,19 +14,29 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var logInButton: UIButton!
+
+    @IBOutlet var maviaLandImage: UIImageView!
     
     // MARK: - Private properties
     
-    private let user = User.getUserData()
+    private let user = UserApp.getUserData()
+    private let networkManager = NetworkManager.shared
     
     // MARK: - View life cycle
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         logInButton.layer.cornerRadius = 8
         
         userNameTF.text = user.login
         passwordTF.text = user.password
+        
+        fetchImage()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        maviaLandImage.layer.cornerRadius = maviaLandImage.frame.width / 2
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -35,8 +45,9 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showCollection" {
-            let tableVC = segue.destination as? CollectionViewController
+        if segue.identifier == "showCollection",
+           let collectionVC = segue.destination as? CollectionViewController {
+            collectionVC.user = user
         }
     }
     
@@ -51,7 +62,7 @@ final class LoginViewController: UIViewController {
             )
             return
         }
-        performSegue(withIdentifier: "showTabBarController", sender: nil)
+        performSegue(withIdentifier: "showCollection", sender: nil)
     }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
@@ -74,6 +85,17 @@ final class LoginViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func fetchImage() {
+        networkManager.fetchImage(from: Link.maviaLandImageURL.url) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.maviaLandImage.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
