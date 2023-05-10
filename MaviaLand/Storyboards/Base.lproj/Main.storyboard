@@ -32,7 +32,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7It-oc-gph">
-                                            <rect key="frame" x="158" y="12" width="146" height="86"/>
+                                            <rect key="frame" x="165" y="12" width="146" height="86"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n47-ov-a7B">
                                                     <rect key="frame" x="0.0" y="0.0" width="146" height="24"/>
@@ -58,8 +58,8 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-op-oBX">
-                                            <rect key="frame" x="158" y="110.5" width="90" height="30"/>
-                                            <color key="backgroundColor" red="0.078431375319999996" green="0.14901961389999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <rect key="frame" x="165" y="110.5" width="90" height="30"/>
+                                            <color key="backgroundColor" red="0.066666662690000003" green="0.18039217590000001" blue="0.45490193369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="et0-hQ-B5b"/>
                                             </constraints>
@@ -79,7 +79,7 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xp1-op-oBX" secondAttribute="trailing" constant="20" symbolic="YES" id="Ac6-oQ-GdD"/>
                                         <constraint firstItem="7It-oc-gph" firstAttribute="top" secondItem="zqF-Cz-f4k" secondAttribute="top" constant="12" id="Fm7-kh-ULS"/>
                                         <constraint firstItem="Fst-iW-NBb" firstAttribute="centerY" secondItem="zqF-Cz-f4k" secondAttribute="centerY" id="HHx-K8-hXA"/>
-                                        <constraint firstItem="7It-oc-gph" firstAttribute="leading" secondItem="Fst-iW-NBb" secondAttribute="trailing" constant="8" id="Hha-3n-kVB"/>
+                                        <constraint firstItem="7It-oc-gph" firstAttribute="leading" secondItem="Fst-iW-NBb" secondAttribute="trailing" constant="15" id="Hha-3n-kVB"/>
                                         <constraint firstItem="Fst-iW-NBb" firstAttribute="leading" secondItem="zqF-Cz-f4k" secondAttribute="leadingMargin" constant="-16" id="Iuj-jP-c3n"/>
                                         <constraint firstItem="Fst-iW-NBb" firstAttribute="top" secondItem="zqF-Cz-f4k" secondAttribute="topMargin" constant="-11" id="Ovz-Mf-B86"/>
                                         <constraint firstItem="7It-oc-gph" firstAttribute="leading" secondItem="Xp1-op-oBX" secondAttribute="leading" id="yfS-zk-t5L"/>
@@ -88,6 +88,7 @@
                                 <connections>
                                     <outlet property="collectionName" destination="n47-ov-a7B" id="fZM-x6-Afc"/>
                                     <outlet property="imageNFT" destination="Fst-iW-NBb" id="gyJ-ky-hYm"/>
+                                    <outlet property="openButton" destination="Xp1-op-oBX" id="gUe-XT-rov"/>
                                     <outlet property="ownersQuantityNFT" destination="THW-YW-sBf" id="JyZ-v8-6mo"/>
                                     <outlet property="quantityNFT" destination="b51-Me-cPm" id="sqX-AK-lhG"/>
                                 </connections>
@@ -162,13 +163,13 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="tad-jN-3nt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCx-hI-avZ">
                                         <rect key="frame" x="0.0" y="63" width="288" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -182,7 +183,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-q8-4Yc">
                                 <rect key="frame" x="115" y="442" width="90" height="30"/>
-                                <color key="backgroundColor" red="0.078431375319999996" green="0.14901961389999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.066666662690000003" green="0.18039217590000001" blue="0.45490193369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="fnb-Pg-fFF"/>
                                 </constraints>
@@ -233,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4eq-VQ-TXq" userLabel="Log In stack">
-                                <rect key="frame" x="30" y="145" width="260" height="138"/>
+                                <rect key="frame" x="30" y="155" width="260" height="138"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4w-Dv-4v1" userLabel="User name TF">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
@@ -247,7 +248,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-IY-WTb">
                                         <rect key="frame" x="0.0" y="108" width="260" height="30"/>
-                                        <color key="backgroundColor" red="0.074509806930000005" green="0.19607841970000001" blue="0.47058826679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.066666662690000003" green="0.18039217590000001" blue="0.45490193369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In">
@@ -260,7 +261,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYv-Bh-EUP" userLabel="Forgot Password? button">
-                                <rect key="frame" x="179" y="313" width="111" height="28"/>
+                                <rect key="frame" x="179" y="323" width="111" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot Password?">
@@ -271,7 +272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAn-3i-hJ2" userLabel="Forgot User Name? button">
-                                <rect key="frame" x="30" y="313" width="120" height="28"/>
+                                <rect key="frame" x="30" y="323" width="120" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot User Name?">
@@ -301,7 +302,7 @@
                             <constraint firstItem="Kgf-sN-IyY" firstAttribute="trailing" secondItem="uYv-Bh-EUP" secondAttribute="trailing" constant="30" id="Zae-VL-huB"/>
                             <constraint firstItem="LAn-3i-hJ2" firstAttribute="top" secondItem="4eq-VQ-TXq" secondAttribute="bottom" constant="30" id="cLm-5D-0TQ"/>
                             <constraint firstItem="Kgf-sN-IyY" firstAttribute="trailing" secondItem="4DQ-XI-WiA" secondAttribute="trailing" constant="110" id="vBW-oI-q0J"/>
-                            <constraint firstItem="4eq-VQ-TXq" firstAttribute="centerY" secondItem="KOY-f4-sdh" secondAttribute="centerY" constant="-70" id="vSg-ir-KZC"/>
+                            <constraint firstItem="4eq-VQ-TXq" firstAttribute="centerY" secondItem="KOY-f4-sdh" secondAttribute="centerY" constant="-60" id="vSg-ir-KZC"/>
                             <constraint firstItem="uYv-Bh-EUP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LAn-3i-hJ2" secondAttribute="trailing" constant="8" symbolic="YES" id="weB-ba-SF7"/>
                         </constraints>
                     </view>

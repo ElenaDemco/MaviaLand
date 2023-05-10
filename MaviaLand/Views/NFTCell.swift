@@ -16,11 +16,20 @@ final class NFTCell: UITableViewCell {
     @IBOutlet var quantityNFT: UILabel!
     @IBOutlet var ownersQuantityNFT: UILabel!
     
+    @IBOutlet var openButton: UIButton!
+    
     // MARK: - Private Properties
     private let networkManager = NetworkManager.shared
     
     // MARK: - Public Properties
     var buttonTapped: (() -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        openButton.layer.cornerRadius = 8
+        imageNFT.layer.cornerRadius = imageNFT.frame.width / 2
+    }
+    
     
     // MARK: - Public Methods
     func configureCollection(with info: Collection) {
@@ -36,7 +45,7 @@ final class NFTCell: UITableViewCell {
                 print(error)
             }
         }
-    } 
+    }
     
     // MARK: - IBActions
     @IBAction func buttonOpenDidTapped(_sender: Any) {
@@ -48,5 +57,6 @@ final class NFTCell: UITableViewCell {
         }
     }
 }
+
 
 
