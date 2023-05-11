@@ -10,42 +10,45 @@ import UIKit
 final class CollectionViewController: UITableViewController {
     
     // MARK: - Private properties
-    private var items: [Collection] = []
+    private var nft: [Collection] = []
     
     var user: UserApp?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchCollection()
+        
         tableView.rowHeight = 150
         tableView.tableFooterView = UIView()
+        
+        fetchCollection()
     }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        nft.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell", for: indexPath) as! NFTCell
-        let item = items[indexPath.row]
+        let item = nft[indexPath.row]
         cell.configureCollection(with: item)
-        
+        cell.buttonTapped = { [weak self] in
+            self?.performSegue(withIdentifier: "showInfo", sender: indexPath)
+        }
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showInfo" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let infoVC = segue.destination as! InfoViewController
-                infoVC.collection = items[indexPath.row]
-            }
+        if segue.identifier == "showInfo",
+           let indexPath = sender as? IndexPath {
+            let destinationController = segue.destination as! InfoViewController
+            destinationController.collection = nft[indexPath.row]
         }
     }
 }
@@ -63,10 +66,10 @@ extension CollectionViewController {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let response = try decoder.decode(MaviaLand.self, from: data)
-                self?.items = [response.collection]
+                self?.nft = [response.collection]
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
-                } 
+                }
             } catch {
                 print("Decoding error: ", error)
             }
