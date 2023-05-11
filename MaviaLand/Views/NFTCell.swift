@@ -49,14 +49,6 @@ final class NFTCell: UITableViewCell {
     
     // MARK: - IBActions
     @IBAction func buttonOpenDidTapped(_sender: Any) {
-        if let tableView = self.superview as? UITableView {
-            if let indexPath = tableView.indexPath(for: self) {
-                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-                tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
-            }
-        }
+        buttonTapped?()
     }
 }
-
-
-
