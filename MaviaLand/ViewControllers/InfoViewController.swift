@@ -55,8 +55,8 @@ final class InfoViewController: UIViewController {
             usdRateLabel.text = String("\(paymentToken.usdPrice) USD")
         }
         salesLabel.text = String("Sales: \(info.stats.totalSales)")
-        averageLabel.text = String(format: "Max: %.2f", info.stats.averagePrice)
-        floorLabel.text = String(format: "Min: %.2f", info.stats.floorPrice)
+        averageLabel.text = String(format: "Avg: %.2f", info.stats.averagePrice)
+        floorLabel.text = String(format: "Floor: %.2f", info.stats.floorPrice)
         descriptionText.text = info.description
         
         networkManager.fetchImage(from: info.imageUrl) { [weak self] result in
