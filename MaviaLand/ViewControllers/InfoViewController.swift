@@ -15,8 +15,11 @@ final class InfoViewController: UIViewController {
     
     @IBOutlet var ethRateLabel: UILabel!
     @IBOutlet var usdRateLabel: UILabel!
-    @IBOutlet var statsLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    
+    @IBOutlet var salesLabel: UILabel!
+    @IBOutlet var averageLabel: UILabel!
+    @IBOutlet var floorLabel: UILabel!
+    @IBOutlet var descriptionText: UITextView!
     
     @IBOutlet var logOutButton: UIButton!
     
@@ -47,11 +50,13 @@ final class InfoViewController: UIViewController {
     // MARK: - Private Methods
     private func configureInfo(with info: Collection) {
         if let paymentToken = info.paymentTokens.first {
-            ethRateLabel.text = String("\(paymentToken.ethPrice)")
-            usdRateLabel.text = String("\(paymentToken.usdPrice)")
+            ethRateLabel.text = String("\(paymentToken.ethPrice) ETH")
+            usdRateLabel.text = String("\(paymentToken.usdPrice) USD")
         }
-        statsLabel.text = String("\(info.stats)")
-        descriptionLabel.text = info.description
+        salesLabel.text = String("Sales: \(info.stats.totalSales)")
+        averageLabel.text = String(format: "Max: %.2f", info.stats.averagePrice)
+        floorLabel.text = String(format: "Min: %.2f", info.stats.floorPrice)
+        descriptionText.text = info.description
         
         networkManager.fetchImage(from: info.imageUrl) { [weak self] result in
             switch result {
