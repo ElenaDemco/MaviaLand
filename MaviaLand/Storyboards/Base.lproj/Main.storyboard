@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-q8-4Yc">
-                                <rect key="frame" x="115" y="464.5" width="90" height="30"/>
+                                <rect key="frame" x="115" y="479" width="90" height="30"/>
                                 <color key="backgroundColor" red="0.066666662690000003" green="0.18039217590000001" blue="0.45490193369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="fnb-Pg-fFF"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-LJ-0HQ" userLabel="Stats Stack">
-                                <rect key="frame" x="16" y="179.5" width="288" height="260"/>
+                                <rect key="frame" x="16" y="179.5" width="288" height="288"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="snE-jN-xLM" userLabel="Currency Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
@@ -194,12 +194,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-gp-Qu2">
-                                        <rect key="frame" x="0.0" y="71" width="288" height="189"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-gp-Qu2">
+                                        <rect key="frame" x="0.0" y="71" width="288" height="217"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="189" id="ZP3-Uw-hiO"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="hdZ-8h-fHx"/>
+                                            <constraint firstAttribute="width" secondItem="8hr-gp-Qu2" secondAttribute="height" multiplier="288:217" id="YCh-YH-IV0"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -221,7 +220,7 @@
                             <constraint firstItem="jNa-LJ-0HQ" firstAttribute="top" secondItem="Wid-KV-WhN" secondAttribute="bottom" constant="28.5" id="EGv-u5-gdt"/>
                             <constraint firstItem="OaM-dJ-1Hf" firstAttribute="trailing" secondItem="jNa-LJ-0HQ" secondAttribute="trailing" constant="16" id="JPw-O0-x8p"/>
                             <constraint firstItem="Wid-KV-WhN" firstAttribute="leading" secondItem="OaM-dJ-1Hf" secondAttribute="leading" id="JdW-QE-RHN"/>
-                            <constraint firstItem="OaM-dJ-1Hf" firstAttribute="bottom" secondItem="eyy-q8-4Yc" secondAttribute="bottom" multiplier="1.05" id="OeO-Za-UGW"/>
+                            <constraint firstItem="OaM-dJ-1Hf" firstAttribute="bottom" secondItem="eyy-q8-4Yc" secondAttribute="bottom" multiplier="1.02" id="OeO-Za-UGW"/>
                             <constraint firstItem="OaM-dJ-1Hf" firstAttribute="trailing" secondItem="Wid-KV-WhN" secondAttribute="trailing" id="gWe-z1-Ndg"/>
                             <constraint firstItem="jNa-LJ-0HQ" firstAttribute="leading" secondItem="OaM-dJ-1Hf" secondAttribute="leading" constant="16" id="hgX-ej-Js5"/>
                             <constraint firstItem="eyy-q8-4Yc" firstAttribute="centerX" secondItem="V2u-hP-l1S" secondAttribute="centerX" id="pSB-0s-qDg"/>
@@ -242,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGv-kx-Ovr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406.25" y="109.85915492957747"/>
+            <point key="canvasLocation" x="1404.375" y="108.80281690140845"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="NWm-Be-ETj">
@@ -344,7 +343,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oJB-ru-kh7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DC1-6G-mZM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
