@@ -26,10 +26,9 @@ struct Collection: Codable {
 }
  
 struct Payment: Codable {
+    
     let id: Int
     let name: String
-  
-    let imageUrl: URL
 
     let ethPrice: Double
     let usdPrice: Double

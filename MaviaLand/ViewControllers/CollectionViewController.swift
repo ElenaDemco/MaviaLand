@@ -24,6 +24,13 @@ final class CollectionViewController: UITableViewController {
         fetchCollection()
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "showInfo" {
+            return false
+        }
+        return true
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -11,7 +11,6 @@ enum Link {
     case maviaLandImageURL
     case maviaLandBannerURL
     case maviaLandURL
-    case ethImageUrl
     
     var url: URL {
         switch self {
@@ -21,8 +20,6 @@ enum Link {
             return URL(string: "https://i.seadn.io/gcs/files/51d38eb7fbb6c62187b580aeaf108748.jpg?w=500&auto=format")!
         case .maviaLandURL:
             return URL(string: "https://api.opensea.io/collection/mavia-land?format=json")!
-        case .ethImageUrl:
-            return URL(string: "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg")!
         }
     }
 }

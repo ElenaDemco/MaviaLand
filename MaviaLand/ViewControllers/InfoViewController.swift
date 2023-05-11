@@ -32,6 +32,7 @@ final class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 8
+        ethImage.layer.cornerRadius = ethImage.frame.width / 2
         
         if let collection = collection {
             configureInfo(with: collection)
