@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MaviaLand: Codable {
+struct MaviaLand: Decodable {
     let collection: Collection
 }
 
-struct Collection: Codable {
+struct Collection: Decodable {
     let name: String
     let description: String
     
@@ -25,7 +25,7 @@ struct Collection: Codable {
     let stats: Stats
 }
  
-struct Payment: Codable {
+struct Payment: Decodable {
     
     let id: Int
     let name: String
@@ -35,23 +35,23 @@ struct Payment: Codable {
 }
 
 
-struct Traits: Codable {
+struct Traits: Decodable {
     let price: TraitInfo
     let type: TraitType
 }
 
-struct TraitInfo: Codable {
+struct TraitInfo: Decodable {
     let min: Double
     let max: Double
 }
 
-struct TraitType: Codable {
+struct TraitType: Decodable {
     let legendary: Int
     let common: Int
     let rare: Int
 }
 
-struct Stats: Codable {
+struct Stats: Decodable {
     let totalSales: Int
     let averagePrice: Double
     let floorPrice: Double
