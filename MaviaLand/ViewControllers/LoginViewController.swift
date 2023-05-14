@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var logInButton: UIButton!
-
+    
     @IBOutlet var maviaLandImage: UIImageView!
     
     // MARK: - Private properties
@@ -23,7 +23,7 @@ final class LoginViewController: UIViewController {
     private let networkManager = NetworkManager.shared
     
     // MARK: - View life cycle
-     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,7 +69,7 @@ final class LoginViewController: UIViewController {
         sender.tag == 0
         ? showAlert(title: "Hint", message: "Your name is \(user.login).")
         : showAlert(title: "Hint", message: "Your password is \(user.password).")
-    }
+    } 
     
     // MARK: - Private Methods
     

@@ -13,12 +13,18 @@ final class InfoViewController: UIViewController {
     @IBOutlet var bannerMaviaLand: UIImageView!
     @IBOutlet var ethImage: UIImageView!
     
-    @IBOutlet var ethRateLabel: UILabel!
-    @IBOutlet var usdRateLabel: UILabel!
+    @IBOutlet var ethUsdRateLabel: UILabel!
     
     @IBOutlet var salesLabel: UILabel!
     @IBOutlet var averageLabel: UILabel!
     @IBOutlet var floorLabel: UILabel!
+    
+    @IBOutlet var landCount: UILabel!
+    
+    @IBOutlet var legendaryLabel: UILabel!
+    @IBOutlet var commonLabel: UILabel!
+    @IBOutlet var rareLabel: UILabel!
+    
     @IBOutlet var descriptionText: UITextView!
     
     @IBOutlet var logOutButton: UIButton!
@@ -39,7 +45,7 @@ final class InfoViewController: UIViewController {
         } else {
             showAlert(title: "Error", message: "Data is not available")
         }
-
+        
         fetchImage()
     }
     
@@ -51,15 +57,21 @@ final class InfoViewController: UIViewController {
     // MARK: - Private Methods
     private func configureInfo(with info: Collection) {
         if let paymentToken = info.paymentTokens.first {
-            ethRateLabel.text = String("\(paymentToken.ethPrice) ETH")
-            usdRateLabel.text = String("\(paymentToken.usdPrice) USD")
+            ethUsdRateLabel.text = String("$\(paymentToken.usdPrice)")
         }
-        salesLabel.text = String("Sales: \(info.stats.totalSales)")
-        averageLabel.text = String(format: "Avg: %.2f", info.stats.averagePrice)
-        floorLabel.text = String(format: "Floor: %.2f", info.stats.floorPrice)
+        
+        salesLabel.text = String("Sales \n \(info.stats.totalSales)")
+        averageLabel.text = String(format: "Average \n %.2f", info.stats.averagePrice)
+        floorLabel.text = String(format: "Floor \n %.2f", info.stats.floorPrice)
+        
+        landCount.text = String("Mavia Land - \(info.stats.count) NFT")
+        legendaryLabel.text = String("Legendary \n \(info.traits.type.legendary)")
+        commonLabel.text = String("Common \n \(info.traits.type.common)")
+        rareLabel.text = String("Rare \n \(info.traits.type.rare)")
+        
         descriptionText.text = info.description
         
-        networkManager.fetchImage(from: info.imageUrl) { [weak self] result in
+        networkManager.fetchImage(from: Link.ethImageURL.url) { [weak self] result in
             switch result {
             case .success(let imageData):
                 DispatchQueue.main.async {
@@ -87,7 +99,7 @@ final class InfoViewController: UIViewController {
             }
         }
     }
-     
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
