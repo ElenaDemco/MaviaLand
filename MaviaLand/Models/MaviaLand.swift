@@ -27,7 +27,7 @@ struct Collection: Decodable {
  
 struct Payment: Decodable {
     let usdPrice: Double
-}
+} 
 
 
 struct Traits: Decodable {
