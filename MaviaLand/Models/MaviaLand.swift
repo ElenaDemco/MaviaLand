@@ -26,23 +26,12 @@ struct Collection: Decodable {
 }
  
 struct Payment: Decodable {
-    
-    let id: Int
-    let name: String
-
-    let ethPrice: Double
     let usdPrice: Double
 }
 
 
 struct Traits: Decodable {
-    let price: TraitInfo
     let type: TraitType
-}
-
-struct TraitInfo: Decodable {
-    let min: Double
-    let max: Double
 }
 
 struct TraitType: Decodable {
