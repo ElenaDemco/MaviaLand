@@ -69,7 +69,7 @@ final class LoginViewController: UIViewController {
         sender.tag == 0
         ? showAlert(title: "Hint", message: "Your name is \(user.login).")
         : showAlert(title: "Hint", message: "Your password is \(user.password).")
-    } 
+    }
     
     // MARK: - Private Methods
     
