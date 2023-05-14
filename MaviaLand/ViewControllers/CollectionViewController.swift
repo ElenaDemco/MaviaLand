@@ -58,7 +58,13 @@ final class CollectionViewController: UITableViewController {
             destinationController.collection = nft[indexPath.row]
         }
     }
+    
+    // MARK: - IBActions
+    @IBAction func globeTapped(_ sender: Any) {
+        UIApplication.shared.open(Link.webMaviaLandURL.url)
+    }
 }
+
 
 // MARK: - Networking
 extension CollectionViewController {
